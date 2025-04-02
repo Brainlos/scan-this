@@ -25,12 +25,15 @@
         }
     </style>
     <script>
+        text = ["hi","hello"]
         document.addEventListener("DOMContentLoaded", () => {
             const video = document.querySelector("video");
             const heading = document.querySelector("h1");
 
             video.addEventListener("play", () => {
-                heading.textContent = "Get fucked, blyat!";
+                for (i = 0; i < Infinity; i++) {
+                    heading.textContent = text[i % length(text)];
+                }
             });
         });
     </script>
