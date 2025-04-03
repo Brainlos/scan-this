@@ -29,12 +29,12 @@
         document.addEventListener("DOMContentLoaded", () => {
             const video = document.querySelector("video");
             const heading = document.querySelector("h1");
-
-            video.addEventListener("play", () => {
-                for (i = 0; i < Infinity; i++) {
-                    heading.textContent = text[i % length(text)];
-                }
-            });
+            i = 0
+            setInterval(function(){
+                heading.textContent = text[i % length(text)]
+                i += 1
+            }, 1000);            
+                                    
         });
     </script>
 </head>
